@@ -1,0 +1,45 @@
+{
+  "addStocksInfo" : [ {
+    "id" : "1",
+    "name" : "Intel Corporation",
+    "symbol" : "INTC"
+  }, {
+    "id" : "2",
+    "name" : "Goldman Sachs Group Inc.",
+    "symbol" : "GS"
+  }, {
+    "id" : "3",
+    "name" : "Microsoft Corporation",
+    "symbol" : "MSFT"
+  }, {
+    "id" : "4",
+    "name" : "The Walt Disney Company",
+    "symbol" : "DIS"
+  }, {
+    "id" : "5",
+    "name" : "The Boeing Company",
+    "symbol" : "BA"
+  }, {
+    "id" : "6",
+    "name" : "McDonald's Company",
+    "symbol" : "MCD"
+  },
+  {
+    "id" : "7",
+    "name" : "Tata Consultancy Services",
+    "symbol" : "TCS"
+  },
+  {
+    "id" : "8",
+    "name" : "Larsen and Toubro",
+    "symbol" : "LT"
+  } 
+  ],
+  "myStocksInfo" : {
+    "-M4s56SF9WAACJed5tiK" : {
+      "date" : "",
+      "price" : "1",
+      "shares" : "2"
+    }
+  }
+}
