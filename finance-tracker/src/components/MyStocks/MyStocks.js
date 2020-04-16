@@ -55,7 +55,7 @@ class MyStocks extends Component {
     }
 
     render() {
-        if(Object.keys(this.props.myStocks).length > 4 && Object.keys(this.props.myStocks).length !== Object.keys(this.state.myStocks).length && this.state.isError === false) {
+        if(Object.keys(this.props.myStocks).length > 5 && Object.keys(this.props.myStocks).length !== Object.keys(this.state.myStocks).length && this.state.isError === false) {
             this.createRows();
         }
         let rows = Object.keys(this.state.myStocks).map(stock => {
@@ -96,7 +96,18 @@ class MyStocks extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {rows}
+                                <tr>
+                                    <td>LT</td>
+                                    <td>Larsen and Toubro</td>
+                                    <td>20</td>
+                                    <td>1689.0029</td>
+                                    <td>1691.0031</td>
+                                    <td>149</td>
+                                    <td><button className='StopTrackingBtn' onClick={() => this.props.stopTracking(this.state.myStocks.symbol)}>Stop Tracking</button></td>
+                                </tr>
+                                <tr>
+                                    {rows}
+                                </tr>
                             </tbody>
                         </table>
                     }
