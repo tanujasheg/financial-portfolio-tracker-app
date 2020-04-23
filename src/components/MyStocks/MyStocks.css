@@ -10,7 +10,7 @@
 }
 
 .MyStocksTitle {
-    font-size: 24px;
+    font-size: 26px;
     flex-grow: 1;
 }
 
@@ -48,7 +48,7 @@
     padding-bottom: 12px;
     text-align: left;
     background-color: #4CAF50;
-    background-color:darkslategrey;
+    background-color:darkslategray;
     color: white;
   }
 

@@ -29,11 +29,10 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://financial-portfolio-trac-683d0.firebaseio.com/addStocksInfo.json')
+        Axios.get('https://finance-tracker-8f418.firebaseio.com/addStocksInfo.json')
             .then(response => {
                 let allStocks = response.data;
-                
-                Axios.get('https://financial-portfolio-trac-683d0.firebaseio.com/myStocksInfo.json')
+                Axios.get('https://finance-tracker-8f418.firebaseio.com/myStocksInfo.json')
                 .then(response => {
                     this.setState({
                         myStocks: response.data,
@@ -69,7 +68,7 @@ class Main extends Component {
             selectedStock.date = this.BuyingDate.current.value;
             selectedStock.numberOfShares = this.NoOfShares.current.value;
 
-            Axios.post('https://financial-portfolio-trac-683d0.firebaseio.com/myStocksInfo.json', selectedStock)
+            Axios.post('https://finance-tracker-8f418.firebaseio.com/myStocksInfo.json', selectedStock)
             .then(response => {
                 let allStocks = {...this.state.allStocks};
                 let newAllStocks = [];
@@ -81,11 +80,11 @@ class Main extends Component {
 
                 let newMyStocks = {};
 
-                Axios.get('https://financial-portfolio-trac-683d0.firebaseio.com/myStocksInfo.json')
+                Axios.get('https://finance-tracker-8f418.firebaseio.com/myStocksInfo.json')
                     .then(response => {
                         newMyStocks = response.data;
 
-                        Axios.put('https://financial-portfolio-trac-683d0.firebaseio.com/addStocksInfo.json', newAllStocks)
+                        Axios.put('https://finance-tracker-8f418.firebaseio.com/addStocksInfo.json', newAllStocks)
                             .then(response => {
                                 this.setState({
                                     selectedStock: {},
@@ -135,10 +134,10 @@ class Main extends Component {
         }
         let newAllStocks = this.state.allStocks;
         newAllStocks.push(newAllStocksValue);
-        Axios.put('https://financial-portfolio-trac-683d0.firebaseio.com/addStocksInfo.json', newAllStocks)
+        Axios.put('https://finance-tracker-8f418.firebaseio.com/addStocksInfo.json', newAllStocks)
             .then(response => response)
             .catch(error => {console.log(error)})
-        Axios.put('https://financial-portfolio-trac-683d0.firebaseio.com/myStocksInfo.json', newMyStocks)
+        Axios.put('https://finance-tracker-8f418.firebaseio.com/myStocksInfo.json', newMyStocks)
             .then(response => response)
             .catch(error => {console.log(error)})
         this.setState({

@@ -30,11 +30,10 @@
 }
 
 .AddButton {
-    height: 40px;
-    width:70px;
-    color:white;
-    background-color: darkslategrey;
+    height: 30px;
     width: auto;
     cursor: pointer;
     border-radius: 5px;
+    background-color:darkslategray;
+    color:white;
 }

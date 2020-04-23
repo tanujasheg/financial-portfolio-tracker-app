@@ -7,6 +7,7 @@ const AddStockButton = (props) => {
         <div className='AddStockButton'>
             <button className='StockButton' onClick={() => props.clicked(props.stock)}>{props.stock.symbol}</button>
             {props.stock.name}
+            console.log
         </div>
     )
 }
